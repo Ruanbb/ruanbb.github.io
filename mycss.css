@@ -1,0 +1,11 @@
+@charset "utf-8";
+/* CSS Document */
+div{
+	font-size: 80px;
+	transition: width 2s,height 2s,transform 2s,-webkit-tranform 2s;
+	-webkit-transition: width 2s,height 2s,transform 2s;
+}
+div:hover{
+	transform: rotate(360deg);
+	-webkit-transform: rotate(360deg);
+}
