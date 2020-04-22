@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>ARP攻击</title>
+</head>
+<style type="text/css">
+	.head{
+		font-size: 40px;
+	}
+	.fore{
+		font-size: 22px;
+	}
+	.body{
+		font-size: 18px;
+	}
+</style>
+<body background="head.png" style="background-attachment: fixed">
+	<table width="40%" align="center" border="0" bgcolor="#FFFFFF"><tr align="center" class="head"><td>使用kali进行ARP欺骗</td></tr>
+		<tr class="body" align=""><td>作者：阮邦琦&emsp;发布于2020年4月22日<hr></td></tr>
+		<tr class="fore"><td>kali是开发人员使用的渗透利器，内置了大量渗透工具。kali虚拟机下载地址:<a href="https://mirrors.aliyun.com/kali-images/">https://mirrors.aliyun.com/kali-images/</a>账号密码都是kali。<hr>
+		<li type="1" class="body">使用kali虚拟机攻击win10主机。首先查看win10局域网内的ip地址：</li>
+			<ul><img src="win10ip.PNG"></ul>
+		<li type="1" class="body">打开kali的终端，先输入sudo su，再输入密码（密码不可见）kali，进入root模式。然后直接输入如下命令。-i表示interface网卡接口，-t表示target目标，输入要目标主机win10的ip即可，后面跟上默认网关。</li>
+			<ul><img src="arp.PNG"></ul>
+		<li class="body" type="1">按下回车，arpspoof工具机就会利用TCP/IP协议的漏洞，如图发送大量的欺骗数据包，使目标断网。</li>
+			<ul><img src="arp1.PNG" width="701" height="147"></ul>
+		<li class="body"  type="1">此时win10就不能上网了</li>
+			<ul><img src="dw.PNG" width="421" height="289"></ul>
+		<li class="body"  type="1">按下ctrl+c后就能停止攻击</li>
+			<ul><img src="arp2.PNG" width="698"></ul>
+			<ul class="body"><a href="index.html">返回</a></ul> 
+			</td></tr></table>
+</body>
+</html>

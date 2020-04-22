@@ -9,10 +9,13 @@ function MM_goToURL() { //v3.0
   var i, args=MM_goToURL.arguments; document.MM_returnValue = false;
   for (i=0; i<(args.length-1); i+=2) eval(args[i]+".location='"+args[i+1]+"'");
 }
+function MM_popupMsg(msg) { //v1.0
+  alert(msg);
+}
 </script>
 </head>
 
-<body topmargin="0px" leftmargin="0px" rightmargin="0px" background="head.png">
+<body background="head.png" style="background-attachment: fixed" leftmargin="0px" topmargin="0px" rightmargin="0px" onLoad="MM_popupMsg('请在电脑上打开，手机布局会乱')">
 	<div id="head" class="title">
 	  <div id="qq" title="点赞!"><li>QQ:2298322959</li><li>抖音:r20010816</li><li>Github:</li><a href="https://github.com/Ruanbb">https://github.com/Ruanbb</a></div>
 		<div id="music">
@@ -22,13 +25,22 @@ function MM_goToURL() { //v3.0
 		</audio>
 		</div>
 		<div id="title">阮邦琦的个人博客</a></div>
-		<div id="move"><marquee direction="left">&emsp;记录成长的地方，持续更新中！</marquee></div>
+		<div id="move"><marquee direction="left">
+		记录成长的地方，持续更新中！本站于2020年4月22日创建，请在电脑上打开。
+		</marquee></div>
 </div><hr>	
 <div id="na" align="left">
 	<table width="100%" height="100%" border="0">
 	<tr><td><a href="index.html">首页</a></td></tr>
 	</table>
 </div>
-<div id="resume" onClick="MM_goToURL('parent','cover.html');return document.MM_returnValue" title="个人简历(非正式)"></div>
+<div id="right"><div id="resume" onClick="MM_goToURL('parent','cover.html');return document.MM_returnValue" title="个人简历(非正式)" class="bigger"></div></div>
+<div id="left"><div id="arp"><table width="70%" height="40px" border="0">
+	<tr><td class="f2" align="center"><hr style="border: 1.5px dotted lightseagreen">
+	有手就能学废系列<hr style="border: 1.5px dotted lightseagreen"></td></tr>
+	<tr><td class="f1"><a href="arp.html">利用kali上的工具一条命令进行ARP断网攻击。</a><hr style="border: 1.5px dotted lightseagreen"></td></tr>
+	<tr><td class="f1"><a href="yxh.html">营销号生成器。</a><hr style="border: 1.5px dotted lightseagreen"></td></tr>
+	
+	</table></div></div>
 </body>
 </html>
